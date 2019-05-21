@@ -19,5 +19,5 @@ washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-Nothing in particular
+Nothing in particular - maybe everyone at Udacity - You're AWESOME! Thank You!
 
