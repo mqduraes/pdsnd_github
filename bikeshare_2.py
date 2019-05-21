@@ -213,6 +213,7 @@ def user_stats(df):
     df.fillna('Not Informed')
 
     # TO DO: Display counts of gender
+	# Pending review from Udacity
     try:
         print(' - Counts of Genders.............: {}'.format(df['Gender'].count()))
     except:
