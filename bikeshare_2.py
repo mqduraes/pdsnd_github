@@ -213,12 +213,18 @@ def user_stats(df):
     df.fillna('Not Informed')
 
     # TO DO: Display counts of gender
-    print(' - Counts of Genders.............: {}'.format(df['Gender'].count()))
+    try:
+        print(' - Counts of Genders.............: {}'.format(df['Gender'].count()))
+    except:
+        print('For this file, there\'s no column GENDER. Moving forward to the next stats.')
 
     # TO DO: Display earliest, most recent, and most common year of birth
-    print(' - The youngest user was born on.: {}'.format(int(df['Birth Year'].max())))
-    print(' - The wisest user was born on...: {}'.format(int(df['Birth Year'].min())))
-    print(' - Most of the users were born on: {}'.format(int(df['Birth Year'].mode()[0])))
+    try:
+        print(' - The youngest user was born on.: {}'.format(int(df['Birth Year'].max())))
+        print(' - The wisest user was born on...: {}'.format(int(df['Birth Year'].min())))
+        print(' - Most of the users were born on: {}'.format(int(df['Birth Year'].mode()[0])))
+    except:
+        print('For this file, there\'s no column BIRTH YEAR. Moving forward to the next stats.\n')
 
     # TO DO: Display counts of user types
     print(' - Counts of Users Types:\n{}'.format(df.groupby(['User Type'], axis=0)['Start Time'].count()))
